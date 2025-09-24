@@ -1,52 +1,48 @@
+import React from "react";
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
     id: 1,
     title: "PORTFOLIO",
-    description:
-      "Implemented dark and light mode for better user experience. Integrated a downloadable resume PDF feature. Added an image window for showcasing work visually. ",
-    image: "./src/assets/Image/Portfolio.png",
+    description: "Implemented dark/light mode, resume download, and image showcase.",
+    image: "/Image/Portfolio.png",
     tags: ["React", "Node.js", "Stripe"],
-    
+    demoUrl: "#",
+    githubUrl: "https://github.com/divinerchirag/portfolio",
   },
   {
     id: 2,
     title: "NETFLIX CLONE",
-    description:
-      "Developed a responsive website using React.js, Node.js, Express.js, MongoDB, Tailwind and CSS. ",
-    image: "./src/assets/Image/Netflix.jpg",
+    description: "Responsive site with React, Node, Express, MongoDB, Tailwind.",
+    image: "/Image/Netflix.jpg",
     tags: ["React", "TailwindCSS", "Supabase"],
-    
+    demoUrl: "#",
+    githubUrl: "https://github.com/divinerchirag/netflix-clone",
   },
-
   {
     id: 3,
     title: "SMART DEVELOPER ASSISTANT",
-    description:
-      "Designed a modern, interactive Developer AI Assistant. Use Google Gemeni API .",
-    image: "./src/assets/Image/SDA.jpeg",
+    description: "Modern Developer AI Assistant using Google Gemini API.",
+    image: "/Image/SDA.jpeg",
     tags: ["TypeScript", "D3.js", "Next.js"],
-    
+    demoUrl: "#",
+    githubUrl: "https://github.com/divinerchirag/sda",
   },
 ];
 
 export const ProjectSection = () => {
   return (
     <section id="project" className="py-2 px-4 relative">
-      <div className=" container mx-auto max-w-5xl">
+      <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-16 mt-6 text-center">
-          Featured <span className="text-primary text-orange-500 ">Project</span>
+          Featured <span className="text-orange-500">Project</span>
         </h2>
 
-        <p className="text-center mb-12 max-w-2xl mx-auto">
-          Here are some of my recent projects. Each project was carefully
-          crafted with attention to detail, performance, and user experience.
-        </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, key) => (
+          {projects.map((project) => (
             <div
-              key={key}
+              key={project.id}
               className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
             >
               <div className="h-48 overflow-hidden">
@@ -56,49 +52,55 @@ export const ProjectSection = () => {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
+
               <div className="p-6">
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag) => {
-                    <span className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
+                  {project.tags.map((tag, index) => (
+                    <span
+                      key={index}
+                      className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground"
+                    >
                       {tag}
-                    </span>;
-                  })}
+                    </span>
+                  ))}
                 </div>
 
-                <h3 className="text-xl font-semibold underline mb-3">
-                  {project.title}
-                </h3>
-                <p className="text-muted-foreground text-sm mb-4">
-                  {project.description}
-                </p>
-                <div className="flex justify-between items-center">
-                  <div className="flex space-x-3">
+                <h3 className="text-xl font-semibold underline mb-3">{project.title}</h3>
+                <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
+
+                <div className="flex space-x-3">
+                  {project.demoUrl && (
                     <a
                       href={project.demoUrl}
                       target="_blank"
+                      rel="noopener noreferrer"
                       className="text-foreground/80 hover:text-primary transition-colors duration-300"
                     >
                       <ExternalLink size={20} />
                     </a>
-
+                  )}
+                  {project.githubUrl && (
                     <a
                       href={project.githubUrl}
                       target="_blank"
+                      rel="noopener noreferrer"
                       className="text-foreground/80 hover:text-primary transition-colors duration-300"
                     >
                       <Github size={20} />
                     </a>
-                  </div>
+                  )}
                 </div>
               </div>
             </div>
           ))}
         </div>
+
         <div className="text-center mt-12">
           <a
-            className="cosmic-button w-fit flex items-center mx-auto gap-3 "
+            className="cosmic-button w-fit flex items-center mx-auto gap-3"
             href="https://github.com/divinerchirag"
             target="_blank"
+            rel="noopener noreferrer"
           >
             Check My Github <ArrowRight size={16} />
           </a>
