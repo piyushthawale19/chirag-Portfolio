@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <nav className="bg-black text-white px-6 py-4 flex justify-between items-center shadow-lg fixed w-full z-50">
       {/* Logo */}
-      <h1 className="text-2xl font-bold text-orange-500 hover:underline">Chirag Portfolio</h1>
+      <img src="./src/assets/Image/logo.jpeg" alt="Logo"  className="w-20 ml-20"/>
 
       {/* Links */}
       <ul className="flex gap-12 text-lg font-medium items-center justify-center">
@@ -32,7 +32,7 @@ const Navbar = () => {
             Gallery
           </a>
         </li>
-         <li>
+        <li>
           <a
             href="#skills"
             className="hover:text-orange-400 transition duration-300"
@@ -40,7 +40,7 @@ const Navbar = () => {
             Skills
           </a>
         </li>
-         <li>
+        <li>
           <a
             href="#project"
             className="hover:text-orange-400 transition duration-300"

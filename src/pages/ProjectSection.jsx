@@ -3,65 +3,31 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "Filght & Hotel Booking Platform",
+    title: "PORTFOLIO",
     description:
-      "A Full-stack travel booking platform clone inspired by MakeMyTrip, featuring dynamic search, responsive UI, and real-time data integration.",
-    image: "/projects/img3.png",
+      "Implemented dark and light mode for better user experience. Integrated a downloadable resume PDF feature. Added an image window for showcasing work visually. ",
+    image: "./src/assets/Image/Portfolio.png",
     tags: ["React", "Node.js", "Stripe"],
-    demoUrl: "https://make-my-trip-clone-springboot-2.onrender.com/",
-    githubUrl:
-      "https://github.com/piyushthawale19/make-my-trip-clone-springboot",
+    
   },
   {
     id: 2,
-    title: "Bank Management System",
+    title: "NETFLIX CLONE",
     description:
-      "A Java-based Bank Management System with account creation, secure online transactions, and core banking functionalities..",
-    image: "/projects/img1.png",
+      "Developed a responsive website using React.js, Node.js, Express.js, MongoDB, Tailwind and CSS. ",
+    image: "./src/assets/Image/Netflix.jpg",
     tags: ["React", "TailwindCSS", "Supabase"],
-    demoUrl: "https://github.com/piyushthawale19/BankManagementSystem",
-    githubUrl: "https://github.com/piyushthawale19/BankManagementSystem",
+    
   },
-  
+
   {
     id: 3,
-    title: "Wix-Based Developer Portfolio",
+    title: "SMART DEVELOPER ASSISTANT",
     description:
-      "Designed a modern, interactive portfolio with Wix Studio, combining sleek visuals and smooth navigation to highlight my work and tech stack.",
-    image: "/projects/img4.png",
+      "Designed a modern, interactive Developer AI Assistant. Use Google Gemeni API .",
+    image: "./src/assets/Image/SDA.jpeg",
     tags: ["TypeScript", "D3.js", "Next.js"],
-    demoUrl: "https://piyushthawale7.wixstudio.com/my-site-4",
-    githubUrl: "https://piyushthawale7.wixstudio.com/my-site-4",
-  },
-  {
-    id: 4,
-    title: "Image Search Engine",
-    description:
-      "A responsive image search engine built with HTML, CSS, and JavaScript that fetches high-quality images using real-time API queries.",
-    image: "/projects/img2.png",
-    tags: ["TypeScript", "D3.js", "Next.js"],
-    demoUrl: "https://piyushthawale19.github.io/Create-Image-Search-Engine/",
-    githubUrl: "https://github.com/piyushthawale19/Create-Image-Search-Engine",
-  },
-  {
-    id: 5,
-    title: "Music Player",
-    description:
-      "A sleek, browser-based music player built with HTML, CSS, and JavaScript, featuring custom controls and responsive design.",
-    image: "/projects/img6.png",
-    tags: ["TypeScript", "D3.js", "Next.js"],
-    demoUrl: "https://piyushthawale19.github.io/Musci-Player/",
-    githubUrl: "https://github.com/piyushthawale19/Musci-Player",
-  },
-  {
-    id: 6,
-    title: "Global Currencies Conversion ",
-    description:
-      "A real-time currency converter web app built with HTML, CSS, and JavaScript, enabling seamless conversion between global currencies.",
-    image: "/projects/img5.png",
-    tags: ["TypeScript", "D3.js", "Next.js"],
-    demoUrl: "https://piyushthawale19.github.io/currency-conversion/",
-    githubUrl: "https://github.com/piyushthawale19/currency-conversion",
+    
   },
 ];
 
@@ -70,7 +36,7 @@ export const ProjectSection = () => {
     <section id="project" className="py-2 px-4 relative">
       <div className=" container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-16 mt-6 text-center">
-          Featured <span className="text-primary text-orange-400 ">Project</span>
+          Featured <span className="text-primary text-orange-500 ">Project</span>
         </h2>
 
         <p className="text-center mb-12 max-w-2xl mx-auto">
@@ -131,7 +97,7 @@ export const ProjectSection = () => {
         <div className="text-center mt-12">
           <a
             className="cosmic-button w-fit flex items-center mx-auto gap-3 "
-            href="https://github.com/piyushthawale19"
+            href="https://github.com/divinerchirag"
             target="_blank"
           >
             Check My Github <ArrowRight size={16} />
