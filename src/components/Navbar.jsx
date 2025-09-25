@@ -1,10 +1,9 @@
 import React from "react";
-
 const Navbar = () => {
   return (
     <nav className="bg-black text-white px-6 py-4 flex justify-between items-center shadow-lg fixed w-full z-50">
       {/* Logo */}
-      <img src="./src/assets/Image/logo.jpeg" alt="Logo"  className="w-20 ml-20"/>
+      <img src="/Image/logo.jpeg" alt="Logo" className="w-20 ml-20" />
 
       {/* Links */}
       <ul className="flex gap-12 text-lg font-medium items-center justify-center">
